@@ -2,11 +2,11 @@ server {
 	listen 443 ssl default_server;
 	listen [::]:443 ssl default_server;
 
-	server_name jungchoi.42.fr;
+	server_name doykim.42.fr;
 
 	ssl_protocols TLSv1.2 TLSv1.3;
-	ssl_certificate /etc/nginx/ssl/jungchoi.crt;
-	ssl_certificate_key /etc/nginx/ssl/jungchoi.key;
+	ssl_certificate /etc/nginx/ssl/doykim.crt;
+	ssl_certificate_key /etc/nginx/ssl/doykim.key;
 	
 	root /var/www/html;
 

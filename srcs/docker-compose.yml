@@ -12,7 +12,7 @@ services:
       - intra
     expose:
       - 3306
-    # restart: always
+    restart: always
 
   nginx:
     container_name: nginx
@@ -27,7 +27,7 @@ services:
       - 443:443
     env_file:
       - .env
-    # restart: always
+    restart: always
 
   wordpress:
     container_name: wordpress
@@ -42,20 +42,18 @@ services:
       - .env
     expose:
       - 9000
-    # restart: always
+    restart: always
 
 volumes:
   db-volume:
     driver_opts:
-      device: /Users/jungeun/Desktop/inception/srcs/requirements/tools/data/mariadb
-      # device: /Users/jungchoi/inception/srcs/requirements/tools/data/mariadb
+      device: /home/doykim/Inception/srcs/requirements/tools/data/mariadb
       type: none
       o: bind
   
   wp-volume:
     driver_opts:
-      device: /Users/jungeun/Desktop/inception/srcs/requirements/tools/data/wordpress
-      # device: /Users/jungchoi/inception/srcs/requirements/tools/data/wordpress
+      device: /home/doykim/Inception/srcs/requirements/tools/data/wordpress
       type: none
       o: bind
 

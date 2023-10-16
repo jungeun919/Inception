@@ -4,7 +4,7 @@ if [ ! -d /var/lib/mysql/${WP_NAME} ]; then
 
 	service mariadb start
 
-	sleep 10
+	sleep 20
 
 	mariadb <<- EOF
 	CREATE DATABASE IF NOT EXISTS $WP_NAME;
