@@ -19,10 +19,12 @@ down:
 	sudo docker-compose -f ./srcs/docker-compose.yml down
 
 clean:
-	sudo docker-compose -f ./srcs/docker-compose.yml down --rmi all --volumes
+	sudo docker-compose -f ./srcs/docker-compose.yml down
 	sudo docker system prune -f
 
-fclean: clean
+fclean:
+	sudo docker-compose -f ./srcs/docker-compose.yml down --rmi all --volumes
+	sudo docker system prune -f
 	sudo rm -rf $(VOLUME_PATH)
 
 re:
