@@ -5,8 +5,8 @@ all: $(NAME)
 
 $(NAME):
 	sudo chmod 777 /etc/hosts
-	if ! grep -q "127.0.0.1 doykim.42.fr" /etc/hosts; then \
-	echo "127.0.0.1 doykim.42.fr" >> /etc/hosts; \
+	if ! grep -q "127.0.0.1 jungchoi.42.fr" /etc/hosts; then \
+	echo "127.0.0.1 jungchoi.42.fr" >> /etc/hosts; \
 	fi
 	mkdir -p $(VOLUME_PATH)/mariadb/
 	mkdir -p $(VOLUME_PATH)/wordpress/
@@ -19,7 +19,7 @@ down:
 	sudo docker-compose -f ./srcs/docker-compose.yml down
 
 clean:
-	make down
+	sudo docker-compose -f ./srcs/docker-compose.yml down --rmi all --volumes
 	sudo docker system prune -f
 
 fclean: clean

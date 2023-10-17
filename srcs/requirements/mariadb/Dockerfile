@@ -17,4 +17,4 @@ RUN chmod +x /etc/mysql/mariadb.sh
 
 EXPOSE 3306
 
-ENTRYPOINT [ "/etc/mysql/mariadb.sh" ]
+CMD [ "/etc/mysql/mariadb.sh" ]

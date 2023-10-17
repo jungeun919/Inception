@@ -29,4 +29,4 @@ RUN chmod +x /usr/local/bin/wordpress.sh
 
 EXPOSE 9000
 
-ENTRYPOINT [ "/usr/local/bin/wordpress.sh" ]
+CMD [ "/usr/local/bin/wordpress.sh" ]

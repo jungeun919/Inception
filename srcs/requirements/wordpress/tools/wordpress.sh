@@ -15,7 +15,7 @@ if [ ! -f "/var/www/html/wp-config.php" ]; then
 
 	sleep 10;
 
-	wp core install --allow-root --title='doykim inception' --url=${DOMAIN_NAME} --path=/var/www/html --admin_user=${WP_ADMIN_USER} --admin_password=${WP_ADMIN_PASSWORD} --admin_email=${WP_ADMIN_EMAIL} --skip-email
+	wp core install --allow-root --title='jungchoi inception' --url=${DOMAIN_NAME} --path=/var/www/html --admin_user=${WP_ADMIN_USER} --admin_password=${WP_ADMIN_PASSWORD} --admin_email=${WP_ADMIN_EMAIL} --skip-email
 
 	wp user create cadet cadet@42.fr --allow-root --user_pass=1234 --role=subscriber --path=/var/www/html
 

@@ -47,13 +47,13 @@ services:
 volumes:
   db-volume:
     driver_opts:
-      device: /home/doykim/Inception/srcs/requirements/tools/data/mariadb
+      device: /home/jungchoi/inception/srcs/requirements/tools/data/mariadb
       type: none
       o: bind
   
   wp-volume:
     driver_opts:
-      device: /home/doykim/Inception/srcs/requirements/tools/data/wordpress
+      device: /home/jungchoi/inception/srcs/requirements/tools/data/wordpress
       type: none
       o: bind
 
